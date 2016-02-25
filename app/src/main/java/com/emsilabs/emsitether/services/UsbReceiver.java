@@ -13,21 +13,28 @@ import android.widget.Toast;
 
 import com.emsilabs.emsitether.MainActivity;
 import com.emsilabs.emsitether.R;
+import com.emsilabs.emsitether.utils.Logger;
 
 /**
  * Created by emsi on 23/02/16.
  */
 public class UsbReceiver extends BroadcastReceiver{
 
+    private Logger mLogger;
+
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO Auto-generated method stub
+        mLogger = new Logger(context);
+        mLogger.setMode(Logger.MODE_TOAST);
         if (intent.getExtras().getBoolean("connected")) {
             //do your stuff
             showNotification(context);
+            mLogger.log("usb", "USB Cable Connected");
 
         } else {
             cancelNotification(context, 1);
+            mLogger.log("usb", "USB Cable Disconnected");
         }
 
     }
@@ -42,7 +49,7 @@ public class UsbReceiver extends BroadcastReceiver{
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(context)
-                        .setSmallIcon(android.R.drawable.ic_dialog_info)
+                        .setSmallIcon(R.mipmap.ic_notif)
                         .setContentTitle("Emsi Tether")
                         .setContentText("Activate USB Tethering Now.");
         mBuilder.setContentIntent(contentIntent);
