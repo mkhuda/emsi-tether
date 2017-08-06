@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EmsiTether.iml" filepath="$PROJECT_DIR$/EmsiTether.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/emsitether.iml" filepath="$PROJECT_DIR$/emsitether.iml" />
     </modules>
   </component>
 </project>
