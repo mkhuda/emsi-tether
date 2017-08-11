@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
                                 ngintent.setAction(Intent.ACTION_MAIN);
                                 ComponentName com = new ComponentName("com.android.settings", "com.android.settings.TetherSettings");
                                 ngintent.setComponent(com);
-//                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(ngintent);
                             }
                         })
