@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
               .setAction("GO", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent ngintent = new Intent();
-                    ngintent.setAction(Intent.ACTION_MAIN);
-                    ComponentName com = new ComponentName("com.android.settings", "com.android.settings.TetherSettings");
-                    ngintent.setComponent(com);
-                    startActivity(ngintent);
+                  Intent ngintent = new Intent();
+                  ngintent.setAction(Intent.ACTION_MAIN);
+                  ComponentName com = new ComponentName("com.android.settings", "com.android.settings.TetherSettings");
+                  ngintent.setComponent(com);
+                  startActivity(ngintent);
                 }
               })
               .show();
