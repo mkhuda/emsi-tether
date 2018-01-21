@@ -28,7 +28,6 @@ public class UsbReceiver extends BroadcastReceiver{
         mLogger = new Logger(context);
         mLogger.setMode(Logger.MODE_TOAST);
         if (intent.getExtras().getBoolean("connected")) {
-            //do your stuff
             showNotification(context);
             mLogger.log("usb", "USB Cable Connected");
 
@@ -36,7 +35,6 @@ public class UsbReceiver extends BroadcastReceiver{
             cancelNotification(context, 1);
             mLogger.log("usb", "USB Cable Disconnected");
         }
-
     }
 
     private void showNotification(Context context) {
